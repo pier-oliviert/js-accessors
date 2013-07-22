@@ -25,3 +25,10 @@ test "different instances do not share the same variable", ->
   ok gary.name() is "Gary", "Gary lost his name"
 
   ok john.name() isnt gary.name(), "John and Gary shouldn't have the same name"
+
+test "setters are chainable", ->
+  user = new User().name("John").email("john@doe.com")
+
+  ok user.name() is "John", "Name should be John"
+  ok user.email() is "john@doe.com", "Email should be john@doe.com"
+  

@@ -14,7 +14,8 @@
             if (v === void 0) {
               return value;
             }
-            return value = v;
+            value = v;
+            return _this;
           };
           this[accessory] = fn;
           return this[accessory]();

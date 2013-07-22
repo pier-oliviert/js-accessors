@@ -47,4 +47,11 @@
     return ok(john.name() !== gary.name(), "John and Gary shouldn't have the same name");
   });
 
+  test("setters are chainable", function() {
+    var user;
+    user = new User().name("John").email("john@doe.com");
+    ok(user.name() === "John", "Name should be John");
+    return ok(user.email() === "john@doe.com", "Email should be john@doe.com");
+  });
+
 }).call(this);

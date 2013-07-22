@@ -7,6 +7,7 @@ class @Accessible
           if v is undefined
             return value
           value = v
+          @
         @[accessory] = fn
         @[accessory]()
       @[accessory]()
